@@ -3,13 +3,13 @@ let prime = [1,2,3,5,7]
 // map
 // Calls a defined callback function on each element of an array, and returns an array that contains the results.
 // Generates new array ..
-// let a = prime.map(
-//     (arg) =>{
-//         return arg + 1
-//     }
-// )
+ let a = prime.map(
+     (arg) =>{
+         return arg + 1
+    }
+ )
 
-// console.log(a)
+ console.log(a)
 
 // filter 
 // Returns the elements of an array that meet the condition specified in a callback function.
