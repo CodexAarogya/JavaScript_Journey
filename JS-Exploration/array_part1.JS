@@ -45,7 +45,7 @@ console.log(numbers.includes(4)) // true
     console.log(numbers) // [ 1, 2, 3, 4 ]
 
     console.log(numbers.unshift(0)) // add element to beginning of an array and returns new array length
-    console.log(numbers.shift()) // removes forst element and returns it
+    console.log(numbers.shift()) // removes first element and returns it
 
 }
 
