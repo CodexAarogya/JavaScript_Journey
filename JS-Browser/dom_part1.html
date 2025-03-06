@@ -1,0 +1,66 @@
+<!-- NOTE: SEE THE CHANGES IN CONSOLE IN BROWSER -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in JavaScript</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div class="child">Child-1</div>
+        <div class="child">Child-2</div>
+        <div class="child">Child-3</div>
+        <div class="child">Child-4</div>
+    </div>
+
+</body>
+<script>
+    const parent = document.querySelector('#parent')
+    console.log(parent) //   
+    console.log(parent.children) // HTML COLLECTIONS
+    // parent.style.backgroundColor = 'red' // targeting CSS property of parent
+
+    // Accessing children of any parent ..
+
+    // General (Method 1: )
+    console.log(parent.children[0])
+    console.log(parent.children[1])
+    console.log(parent.children[2])
+    console.log(parent.children[3])
+
+    //Method 2 :
+    // converting into Array
+    const usingArray = Array.from(parent.children)
+    console.log(usingArray)
+    usingArray.forEach((value) => (console.log(value)))
+
+    // Targeting child ..
+    console.log(parent.children[1].style.color = 'red')
+    console.log(parent.children[1].innerHTML)
+    console.log(parent.firstElementChild)
+    console.log(parent.lastElementChild)
+
+    // console.log(parent.firstChild)  //#text
+    // console.log(parent.lastChild)    // #text
+
+
+    // Targeting Parent and Sibling ...
+    const childOne = document.querySelector('.child')
+    console.log(childOne.parentElement)
+
+    console.log(childOne)
+    console.log(childOne.nextElementSibling)
+
+
+</script>
+
+</html>
