@@ -75,9 +75,17 @@ input:focus {
 
 .gender {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     gap: 10px;
     margin: 10px 35px;
+}
+
+.gender input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: rgb(153, 38, 38);
 }
 
 button {
