@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer using JS</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #6c6565;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: auto;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button {
+        height: 100px;
+        width: 100px;
+        border: none;
+        margin: 10px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        transform: scale(1.09, 1.09);
+    }
+</style>
+
+<body>
+    <span>
+        <h2 style="color: black; font-size: 40px;">Click on the colors to see effect</h2>
+    </span>
+    <div id="container">
+        <button class="box" id="violet" style="background-color: violet;"></button>
+        <button class="box" id="indigo" style="background-color: indigo;"></button>
+        <button class="box" id="blue" style="background-color: blue;"></button>
+        <button class="box" id="green" style="background-color: green;"></button>
+        <button class="box" id="yellow" style="background-color: yellow;"></button>
+        <button class="box" id="orange" style="background-color: orange;"></button>
+        <button class="box" id="red" style="background-color: red;"></button>
+    </div>
+</body>
+<script>
+    const box = document.querySelectorAll('.box')
+    //  console.log(box)    // NodeLists
+    const body = document.querySelector('body')
+    box.forEach(
+        (selected) => {
+            selected.addEventListener('click', (event) => (body.style.backgroundColor = event.target.id))
+        }
+    )
+</script>
+
+</html>
