@@ -45,7 +45,6 @@ function submitData() {
                 result.innerHTML = `<span>BMI Value : ${bmi}</span><p><strong>Obese</strong></p>`;
             }
         }
-
     }
     )
 }
