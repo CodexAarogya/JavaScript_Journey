@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: green;">
+    <div id="weeks" style="color: yellow;">
+        <div class="days">Sunday</div>
+        <div class="days">Monday</div>
+        <div class="days">Tuesday</div>
+        <div class="days">Wednesday</div>
+        <div class="days">Thursday</div>
+        <div class="days">Friday</div>
+    </div>
+
+    <script>
+        // CREATING NEW CHILD .....
+        const newDiv = document.createElement('div')
+        newDiv.className = "days"
+        newDiv.id = "newly-created-day"
+        newDiv.innerText = "Saturday"
+        newDiv.setAttribute('title','appended-day')
+
+
+        // document.getElementById('weeks').appendChild(newDiv)
+
+//      SEE DIFFERENCES ..................
+
+        // document.body.appendChild(newDiv)
+
+        const test = document.querySelector('#newly-created-day')
+        console.log(test.parentNode)
+
+
+    </script>
+
+
+
+</body>
+</html>
