@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and remove element</title>
+</head>
+
+<body style="background-color: #212121;">
+    <div id="week" style="color: yellow;">
+        <div class="days">Sunday</div>
+        <div class="days">Monday</div>
+        <div class="days">Tuesday</div>
+        <div class="days">Wednesday</div>
+    </div>
+    <script>
+        // creating new element
+        function addDay(newDay) {
+            const newdiv = document.createElement('div')
+            newdiv.id = "new-days"
+            newdiv.className = "days"
+            newdiv.innerText = `${newDay}`
+            document.querySelector('#week').appendChild(newdiv)
+        }
+        addDay("Thursday");
+        addDay("Friday");
+        addDay("Saturday");
+
+
+        // Editing new element ...  first create then replace is considered as optimised way
+        // ........................  can be done in multiple way.
+        // editing nth element
+
+        function edit(name){
+            let pos = 6
+            const newdiv = document.querySelector(".days:nth-child(1)")
+            const replacingDiv = document.createElement('div')
+            replacingDiv.innerText =  `${name}`
+            newdiv.replaceWith(replacingDiv)
+        }
+        
+        // edit("holiday");       // EDITED ----------------------- 
+        
+        // DELETING ELEMENT.....
+        {
+            const newdiv = document.querySelector(".days:nth-child(1)")
+
+
+            // newdiv.remove()    // REMOVED -----------------------
+        }
+
+        
+
+
+
+    </script>
+</body>
+
+</html>
