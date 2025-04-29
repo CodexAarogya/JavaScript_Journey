@@ -1,0 +1,81 @@
+<!-- With asynchronous programming, JavaScript programs can start long-running tasks, and continue running other tasks in parallel.
+
+But, asynchronus programmes are difficult to write and difficult to debug.
+
+Because of this, most modern asynchronous JavaScript methods don't use callbacks. Instead, in JavaScript, asynchronous programming is solved using Promises instead.
+
+setTimeout () 
+clearTimeout ()
+setInterval ()
+clearInerval ()
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Javascript fundamentals</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <div class="container">
+
+        <h2>click on the button below to see effect</h2>
+        <button class="setTimeout" onclick="setTimeout(timeOut,2000)">setTimeout ()</button>
+        <button class="clearTimeout" onclick="clearTimeout(timeOut)">clearTimeout ()</button>
+        <p>
+        <h1>Hey! JavaScript is an Awesome Language !</h1>
+        </p>
+        <hr>
+        &nbsp;
+        <h2>click on the button below to see effect</h2>
+        <button class="setInterval">setInterval ()</button>
+        <button class="clearInerval">clearInerval ()</button>
+        <p>
+        <h1>Hey! JavaScript is an Awesome Language ! </h1>
+        </p>
+
+    </div>
+
+
+    <script>
+        const select = document.querySelectorAll('h1');
+
+        // Store timer IDs here
+        let timeoutID;
+        let intervalID;
+        let greeting = "Hello ! "
+
+        const timeOut = function () {
+            let changeText = "Text changed after 2sec.";
+            select[0].innerText = changeText;
+        }
+
+        const interval = function () {
+            select[1].innerText += greeting;
+        }
+
+        // Attach handlers
+        document.querySelector('.setTimeout').onclick = function () {
+            timeoutID = setTimeout(timeOut, 2000);
+        }
+
+        document.querySelector('.clearTimeout').onclick = function () {
+            clearTimeout(timeoutID);
+        }
+
+        document.querySelector('.setInterval').onclick = function () {
+            intervalID = setInterval(interval,1000);
+        }
+
+        document.querySelector('.clearInerval').onclick = function () {
+            clearInterval(intervalID);
+        }
+    </script>
+
+</body>
+
+</html>
