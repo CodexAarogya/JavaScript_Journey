@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #212121;
+            width: auto;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            width: 10rem;
+            height: 10vh;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+            border-radius: 18px;
+            background-color: #dedede;
+            letter-spacing: 2px;
+            margin-top: 50vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+    <script>
+
+        let clearID;
+        let setID;
+        let bodyBgColor = document.querySelector('body')
+
+        const change = () => {
+            let r_component = Math.floor(Math.random() * 255);
+            let g_component = Math.floor(Math.random() * 255);
+            let b_component = Math.floor(Math.random() * 255);
+            bodyBgColor.style.backgroundColor = `rgb(${r_component}, ${g_component},${b_component})`
+
+            // console.log(`rgb(${r_component}, ${g_component},${b_component})`)
+        }
+
+        // console.log(change())
+        document.getElementById('start').onclick = function () {
+            if (!setID) {
+
+                setID = setInterval(change, 1000)
+            }
+        }
+
+        document.getElementById('stop').onclick = function () {
+            clearInterval(setID);
+            setID = null;
+        }
+    </script>
+</body>
+
+</html>
