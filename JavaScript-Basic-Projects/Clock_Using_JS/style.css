@@ -129,3 +129,51 @@ body {
 .text-container a{
     color: #ffffff;
 }
+
+.pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    z-index: 999;
+    filter: opacity(90%);
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 8px;
+}
+
+.pop-up img{
+    width: 38px;
+    height: 38px;
+    margin: 10px;
+}
+
+.pop-up img:hover{
+    transform: scale(1.1);
+    transition-duration: 300ms;
+}
+
+.pop-up p{
+    padding: 28px;
+}
+
+.close-me-box{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.close-me-box img{
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+.close-me-box img:hover{
+    background-color: #842626;
+    transition-duration: 0ms;
+    cursor: pointer;
+}

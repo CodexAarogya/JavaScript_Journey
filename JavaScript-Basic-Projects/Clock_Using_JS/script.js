@@ -1,3 +1,5 @@
+// Timing Logic -------------------------
+
 let hr = document.getElementById('hour');
 let min = document.getElementById('minute');
 let sec = document.getElementById('second');
@@ -22,6 +24,8 @@ function getTime(){
 
 setInterval(getTime,1000);
 
+// Date and Day display ----------------------
+
 let day = document.getElementById('daybox');
 let date = document.getElementById('datebox')
 
@@ -30,3 +34,18 @@ const dayArray = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 
 day.innerHTML = dayArray[myDate.getDay()]
 date.innerHTML = myDate.getDate();
+
+// Pop-Up menu --------------------
+
+const popup = document.querySelector('.pop-up');
+
+setTimeout(()=>{
+    popup.style.display = "flex"
+}, 6000);
+
+function closeMe(){
+    popup.style.display = "none";
+}
+
+
+
