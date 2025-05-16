@@ -21,3 +21,5 @@ class cat{
  oggy.meow();
  jack.meow();
  cat.counterFunc();
+
+// oggy.counterFunc() // This throws an error! since the counterFunc() is called using the class name not the instance of the class.
